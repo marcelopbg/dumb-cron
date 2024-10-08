@@ -26,6 +26,10 @@ cron.schedule(CRON_SCHEDULE, () => {
 });
 
 
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
+
 app.listen(3000, () => {
     console.log(`Server running on port 3000. Scheduled to hit ${BASE_URL}/health every 5 seconds.`);
   });
